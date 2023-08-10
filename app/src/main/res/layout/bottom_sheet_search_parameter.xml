@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?colorBackground"
+    android:padding="@dimen/size_16dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TextTitlePrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_title_filter"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/btnSubmitFilter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnSubmitFilter" />
+
+    <ImageView
+        android:id="@+id/btnClearFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="@dimen/size_16dp"
+        android:src="@drawable/ic_filter_clear"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnSubmitFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="@dimen/size_16dp"
+        android:src="@drawable/ic_check"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSortTitle"
+        style="@style/TextTitleSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_32dp"
+        android:text="@string/lbl_title_sort_by"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <RadioGroup
+        android:id="@+id/rgSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:background="@drawable/bg_radio_group"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSortTitle">
+
+        <RadioButton
+            android:id="@+id/rbPublishAt"
+            style="@style/radioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_8dp"
+            android:layout_weight="1"
+            android:text="PublishAt" />
+
+        <RadioButton
+            android:id="@+id/rbPopularity"
+            style="@style/radioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_8dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Popularity" />
+
+        <RadioButton
+            android:id="@+id/rbRelevancy"
+            style="@style/radioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_8dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Relevancy" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvSearchInTitle"
+        style="@style/TextTitleSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:text="@string/lbl_title_search_in"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgSort" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:background="@drawable/bg_radio_group"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSearchInTitle">
+
+        <CheckBox
+            android:id="@+id/cbTitle"
+            style="@style/radioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_8dp"
+            android:layout_weight="1"
+            android:text="Title" />
+
+        <CheckBox
+            android:id="@+id/cbDescription"
+            style="@style/radioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_8dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Description" />
+
+        <CheckBox
+            android:id="@+id/cbContent"
+            style="@style/radioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_8dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Content" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

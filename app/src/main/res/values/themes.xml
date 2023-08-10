@@ -1,0 +1,64 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NewsApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue_200</item>
+        <item name="colorPrimaryVariant">@color/blue_100</item>
+        <!-- Customize your theme here. -->
+
+        <item name="colorBackground">@color/white_100</item>
+    </style>
+
+    <style name="Theme.NewsApplication" parent="Base.Theme.NewsApplication" />
+
+    <style name="TextTitlePrimary" parent="Theme.NewsApplication">
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <!--        <item name="fontFamily">@font/dana_regular</item>-->
+        <item name="android:textColor">@color/black_200</item>
+        <!--<item name="android:textAppearance">@style/TextAppearance.Regular</item>-->
+    </style>
+
+    <style name="TextTitleSecondary" parent="Theme.NewsApplication">
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <!--        <item name="fontFamily">@font/dana_regular</item>-->
+        <item name="android:textColor">@color/black_200</item>
+        <!--<item name="android:textAppearance">@style/TextAppearance.Regular</item>-->
+    </style>
+
+    <style name="TextBodyPrimary" parent="Theme.NewsApplication">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <!--        <item name="fontFamily">@font/dana_regular</item>-->
+        <item name="android:textColor">@color/black_200</item>
+        <!-- <item name="android:textAppearance">@style/TextAppearance.Regular</item>-->
+    </style>
+
+    <style name="TextError" parent="Theme.NewsApplication">
+        <item name="android:textColor">@color/red_500</item>
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <!--        <item name="android:fontFamily">@font/dana_regular</item>-->
+    </style>
+
+    <style name="EditTextPrimary" parent="Theme.NewsApplication">
+        <item name="android:textColorHint">@color/gray_200</item>
+        <item name="android:textColor">@color/gray_200</item>
+        <item name="android:paddingTop">@dimen/size_12dp</item>
+        <item name="android:paddingBottom">@dimen/size_12dp</item>
+        <item name="android:paddingLeft">@dimen/size_10dp</item>
+        <item name="android:paddingRight">@dimen/size_10dp</item>
+    </style>
+
+    <style name="DialogFragmentStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="radioBtn" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="android:background">@drawable/bg_radio_btn</item>
+        <item name="android:textColor">@color/color_radio_btn_text</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

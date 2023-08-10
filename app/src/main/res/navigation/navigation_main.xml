@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/newsFragment">
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.hrg.myapplication.ui.home.NewsFragment"
+        android:label="NewsFragment"
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_newsFragment_to_searchParameterBottomSheet"
+            app:destination="@id/searchParameterBottomSheet" />
+        <action
+            android:id="@+id/action_newsFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.hrg.myapplication.ui.favorite.FavoriteFragment"
+        android:label="FavoriteFragment"
+        tools:layout="@layout/fragment_favorite_news">
+        <action
+            android:id="@+id/action_favoriteFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/searchParameterBottomSheet"
+        android:name="com.hrg.myapplication.ui.home.search.SearchParameterBottomSheet"
+        android:label="SearchParameterBottomSheet"
+        tools:layout="@layout/bottom_sheet_search_parameter">
+        <argument
+            android:name="inputModel"
+            app:argType="com.hrg.myapplication.domain.models.SearchParametersModel" />
+    </dialog>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.hrg.myapplication.ui.detail.NewsDetailFragment"
+        android:label="NewsDetailFragment"
+        tools:layout="@layout/fragment_news_detail" >
+        <argument
+            android:name="inputModel"
+            app:argType="com.hrg.myapplication.domain.models.Article" />
+    </fragment>
+</navigation>

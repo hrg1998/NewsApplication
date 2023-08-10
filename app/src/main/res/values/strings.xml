@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">News Application</string>
+
+    <string name="lbl_news">News</string>
+    <string name="lbl_favorite">Favorite</string>
+    <string name="lbl_favorite_news">Favorite News</string>
+    <string name="lbl_title_filter">Filters</string>
+    <string name="lbl_title_sort_by">Sort By:</string>
+    <string name="lbl_title_search_in">Search In:</string>
+    <string name="lbl_open_url">OPEN URL</string>
+    <string name="lbl_publish_at">Publish At: %1$s</string>
+
+    <string name="hint_search">Search…</string>
+
+    <string name="error_cant_find_news">Cannot find news</string>
+    <string name="error_ic_not_found">¯\\_(ツ)_/¯</string>
+    <string name="error_no_favorite_news">You don\'t have favorite news</string>
+
+</resources>
